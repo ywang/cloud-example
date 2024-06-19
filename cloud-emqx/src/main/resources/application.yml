@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cloud-emqx
+  profiles:
+    active: dev
+
+
+emqx:
+  broker: tcp://broker-cn.emqx.io:1883
+  userName: emqx
+  passWord: public
+  topic: test/123
+  qos: 1
+  connectionTimeout: 10
+  keepAlive: 60
+

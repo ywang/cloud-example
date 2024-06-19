@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<springProperty scope="context" name="serverName" source="spring.application.name"/>
+	<springProperty scope="context" name="profile" source="spring.profiles.active"/>
+	<!--  日志文件存储目录   -->
+	<property name="LOG_HOME" value="test/logs/"/>
+	<!-- 打印INFO级别以上的日志 -->
+	<property name="threshold" value="info"/><!-- 日志输出级别 -->
+	<property name="level" value="info"/>
+	<property name="CONSOLE_LOG_PATTERN"
+			  value="%d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level %replace(%caller{1}){'\t|Caller.{1}0|\r\n', ''} : %msg%n"/>
+
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %boldYellow(%thread) | %boldGreen(%logger) | %msg%n</pattern>
+		</encoder>
+	</appender>
+	<!-- 信息日志 -->
+	<appender name="info_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>[%d{HH:mm:ss.SSS}][%-5level][%logger{30}] - [%msg]%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_HOME}/${serverName}_info.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<!-- 错误日志 -->
+	<appender name="error_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_HOME}/${serverName}_error.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[%d{HH:mm:ss.SSS}][%-5level][%logger{30}] - [%msg]%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 开发环境、测试环境 -->
+	<springProfile name="dev,sit,local,qa">
+		<!-- 开发阶段，输出所有信息 -->
+		<root level="info">
+			<appender-ref ref="stdout"/>
+			<appender-ref ref="error_file"/>
+			<appender-ref ref="info_file"/>
+		</root>
+	</springProfile>
+
+</configuration>

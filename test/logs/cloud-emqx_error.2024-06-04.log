@@ -1,0 +1,174 @@
+[15:32:05.326][ERROR][o.e.p.c.m.internal.ClientState] - [cloud-emqx: Timed out as no write activity, keepAlive=60,000,000,000 lastOutboundActivity=23,282,699,770,375 lastInboundActivity=23,282,699,772,000 time=23,552,522,205,041 lastPing=0]
+[15:36:37.586][ERROR][o.e.p.c.m.internal.ClientState] - [cloud-emqx: Timed out as no activity, keepAlive=60,000,000,000 lastOutboundActivity=23,764,775,836,375 lastInboundActivity=23,697,314,337,958 time=23,824,776,628,291 lastPing=23,764,775,849,208]
+[15:36:45.616][ERROR][c.e.c.e.consumer.EmqxConsumer] - [publish error: to:demon, body:{'to':'demon', 'body':'Hello, I'm subscribe_client'}]
+org.eclipse.paho.client.mqttv3.MqttException: 等待来自服务器的响应时超时
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:747)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:818)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:804)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:79)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+[15:44:25.079][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: MqttException]
+org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:228)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.alibaba.fastjson2.JSONException: illegal fieldName input当, offset 1, character 当, line 1, column 2, fastjson-version 2.0.23 当前湿度：73
+	at com.alibaba.fastjson2.JSONReaderUTF16.readFieldNameHashCode(JSONReaderUTF16.java:1053)
+	at com.alibaba.fastjson2.reader.ORG_1_2_EmqxMessage.readObject(Unknown Source)
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:603)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:1906)
+	at com.example.cloud.emqx.consumer.EmqxConsumer$1.messageArrived(EmqxConsumer.java:60)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:519)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	... 1 common frames omitted
+[15:46:32.131][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: MqttException]
+org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:228)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.alibaba.fastjson2.JSONException: illegal fieldName inputd, offset 2, character d, line 1, column 3, fastjson-version 2.0.23 {dev:"d1", time:24/06/04T09:46, cnt:21, T:22.90, hum:86.0, hidx:23.49, tcnt:26}
+	at com.alibaba.fastjson2.JSONReaderASCII.readFieldNameHashCode(JSONReaderASCII.java:141)
+	at com.alibaba.fastjson2.reader.ORG_2_2_EmqxMessage.readObject(Unknown Source)
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:603)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:1906)
+	at com.example.cloud.emqx.consumer.EmqxConsumer$1.messageArrived(EmqxConsumer.java:63)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:519)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	... 1 common frames omitted
+[15:49:43.982][ERROR][o.e.p.c.m.internal.ClientState] - [cloud-emqx: Timed out as no activity, keepAlive=60,000,000,000 lastOutboundActivity=24,551,196,640,458 lastInboundActivity=24,491,451,909,791 time=24,611,201,663,208 lastPing=24,551,196,647,458]
+[15:49:44.000][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: 等待来自服务器的响应时超时]
+org.eclipse.paho.client.mqttv3.MqttException: 等待来自服务器的响应时超时
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:747)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:818)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:804)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:79)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+[15:49:43.992][ERROR][c.e.c.e.consumer.EmqxConsumer] - [publish error: to:demon, body:{'to':'demon', 'body':'Hello, I'm subscribe_client'}]
+org.eclipse.paho.client.mqttv3.MqttException: 等待来自服务器的响应时超时
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:747)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:818)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:804)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:79)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+[15:52:23.250][ERROR][o.e.p.c.m.internal.ClientState] - [cloud-emqx: Timed out as no activity, keepAlive=60,000,000,000 lastOutboundActivity=24,710,469,036,000 lastInboundActivity=24,650,479,646,958 time=24,770,472,704,166 lastPing=24,710,469,042,791]
+[15:52:23.261][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: 等待来自服务器的响应时超时]
+org.eclipse.paho.client.mqttv3.MqttException: 等待来自服务器的响应时超时
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:747)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:818)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:804)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:79)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+[15:52:23.258][ERROR][c.e.c.e.consumer.EmqxConsumer] - [publish error: to:demon, body:{'to':'demon', 'body':'Hello, I'm subscribe_client'}]
+org.eclipse.paho.client.mqttv3.MqttException: 等待来自服务器的响应时超时
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientState.checkForActivity(ClientState.java:747)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:818)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.checkForActivity(ClientComms.java:804)
+	at org.eclipse.paho.client.mqttv3.TimerPingSender$PingTask.run(TimerPingSender.java:79)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+[15:54:40.897][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: MqttException]
+org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:228)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.alibaba.fastjson2.JSONException: illegal fieldName inputd, offset 2, character d, line 1, column 3, fastjson-version 2.0.23 {dev:"d1", time:24/06/04T09:54, cnt:29, T:22.90, hum:86.0, hidx:23.49, tcnt:25}
+	at com.alibaba.fastjson2.JSONReaderASCII.readFieldNameHashCode(JSONReaderASCII.java:141)
+	at com.alibaba.fastjson2.reader.ORG_2_2_EmqxMessage.readObject(Unknown Source)
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:603)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:1906)
+	at com.example.cloud.emqx.consumer.EmqxConsumer$1.messageArrived(EmqxConsumer.java:64)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:519)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	... 1 common frames omitted
+[15:58:39.653][ERROR][c.e.c.e.consumer.EmqxConsumer] - [mqtt error: {}]
+org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.Token.waitForResponse(Token.java:148)
+	at org.eclipse.paho.client.mqttv3.internal.Token.waitForCompletion(Token.java:108)
+	at org.eclipse.paho.client.mqttv3.MqttToken.waitForCompletion(MqttToken.java:67)
+	at org.eclipse.paho.client.mqttv3.MqttClient.connect(MqttClient.java:331)
+	at com.example.cloud.emqx.consumer.EmqxConsumer.init(EmqxConsumer.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.cloud.emqx.EmqxApplication.main(EmqxApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.lang.Object.wait0(Native Method)
+	at java.base/java.lang.Object.wait(Object.java:366)
+	at java.base/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.paho.client.mqttv3.internal.Token.waitForResponse(Token.java:143)
+	... 30 common frames omitted
+[15:58:39.851][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: 已断开连接]
+org.eclipse.paho.client.mqttv3.MqttException: 已断开连接
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:197)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:297)
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+	... 1 common frames omitted
+[15:59:46.162][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: MqttException]
+org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:228)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.alibaba.fastjson2.JSONException: illegal fieldName inputd, offset 2, character d, line 1, column 3, fastjson-version 2.0.23 {dev:"d1", time:24/06/04T09:59, cnt:34, T:23.00, hum:86.0, hidx:23.60, tcnt:24}
+	at com.alibaba.fastjson2.JSONReaderASCII.readFieldNameHashCode(JSONReaderASCII.java:141)
+	at com.alibaba.fastjson2.reader.ORG_1_2_EmqxMessage.readObject(Unknown Source)
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:603)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:1906)
+	at com.example.cloud.emqx.consumer.EmqxConsumer$1.messageArrived(EmqxConsumer.java:64)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:519)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	... 1 common frames omitted
+[16:08:04.832][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: 已断开连接]
+org.eclipse.paho.client.mqttv3.MqttException: 已断开连接
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:197)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:297)
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+	... 1 common frames omitted
+[16:10:40.871][ERROR][c.e.c.e.consumer.EmqxConsumer] - [connectionLost: 已断开连接]
+org.eclipse.paho.client.mqttv3.MqttException: 已断开连接
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:197)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:297)
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:275)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+	... 1 common frames omitted
